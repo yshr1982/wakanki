@@ -1,0 +1,13 @@
+src/data/kanji-map.js と src/data/t2s.js は OpenCC (https://github.com/BYVoid/OpenCC) ver.1.1.9 の
+data/dictionary/STCharacters.txt, STPhrases.txt, JPVariants.txt から生成しています。
+
+OpenCC
+Copyright (c) 2010-2024 Carbo Kuo and contributors
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+
+src/data/jieba-dict.txt は jieba (https://github.com/fxsjy/jieba) v0.42.1 の jieba/dict.txt から生成しています。
+
+jieba
+Copyright (c) 2013 Sun Junyi
+Licensed under the MIT License
