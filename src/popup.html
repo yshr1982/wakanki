@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>和漢記</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>和漢記 <small class="tagline">中文を日本の漢字で読む</small></h1>
+  <label class="row">
+    <input type="checkbox" id="kanji">
+    <span><strong>漢字変換</strong><small>簡体字・繁体字を日本の漢字にする</small></span>
+  </label>
+  <label class="row">
+    <input type="checkbox" id="kana">
+    <span><strong>ひらがな化</strong><small>的→の、和→と、了→た など機能語をかなにする</small></span>
+  </label>
+  <label class="row">
+    <input type="checkbox" id="kunten">
+    <span><strong>返り点（試験的）</strong><small>レ点・一二点で日本語で読む順を示す。ON の間はひらがな化を使いません</small></span>
+  </label>
+  <label class="row sub">
+    <input type="checkbox" id="okuri">
+    <span><strong>送り仮名</strong><small>返り点に合わせて ヲ・ニ・ト・ヨリ などの助詞を小さく付ける</small></span>
+  </label>
+  <label class="row">
+    <input type="checkbox" id="font">
+    <span><strong>日本語の字形で表示</strong><small>化・術・骨 などを日本のフォントで描く</small></span>
+  </label>
+  <label class="row">
+    <input type="checkbox" id="site">
+    <span><strong>このサイトでは使わない</strong><small id="host"></small></span>
+  </label>
+  <button id="restore" type="button">このタブを元に戻す</button>
+  <p id="status" role="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>

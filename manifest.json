@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "和漢記",
+  "short_name": "和漢記",
+  "version": "0.5.0",
+  "description": "和漢記：中国語ページの簡体字・繁体字を日本の漢字と字形で表示し、返り点・送り仮名を付けて日本語の語順で読めるようにします。",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_title": "和漢記 — 中文を日本の漢字で読む",
+    "default_popup": "src/popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "background": { "service_worker": "src/background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/data/kanji-map.js", "src/data/kana-rules.js", "src/converter.js", "src/japanese-font.js", "src/kunten-dom.js", "src/content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
